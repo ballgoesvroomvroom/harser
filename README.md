@@ -5,6 +5,10 @@ Used for my own [portfolio page](https://github.com/ballgoesvroomvroom/weter).<b
 
 With its own semantic layout consisting of `<article>` and `<section>` tags.
 
+## Dependancies
+Only built-in modules are used, namely `os` (for path handling) and `re` (for regex capturing).<br>
+Included a `requirements.txt` just for the sake of it.
+
 ## Syntax
 
 `# header`: similar to markdown, **H1** headings automatically create a new article, **H2** onwards creates a new section<br>
