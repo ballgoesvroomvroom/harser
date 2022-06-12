@@ -4,7 +4,7 @@ class Regex:
 	## .group(1) is hashtags captured
 	## .group(2) is chapter name captured
 	## .group(3) is article id
-	header = re.compile("^(#+) (.*?)(?: \[(.*)\])?$")
+	header = re.compile("^(#{1,6}) (.*?)(?: \[(.*)\])?$")
 
 	## use to capture images
 	## .group(1) is the image alt text
@@ -32,10 +32,10 @@ class Regex:
 	## denotes a closure of div
 	closing_div = re.compile("^}$")
 
-	## captures a header for a div
+	## captures a header for a div; used when there is no need to create a section
 	## .group(1) returns the hashtags corersponding to the header level
 	## .group(2) returns the actual header content
-	div_header = re.compile(r"^(?<!\\){ *(#+)([^ ]+) *}$")
+	div_header = re.compile(r"^(?<!\\){ *(#{1,6})([^ ]+) *}$")
 
 	## captures a list element
 	## .group(1) is the list element's content
