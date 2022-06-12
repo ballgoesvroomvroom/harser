@@ -105,13 +105,13 @@ class Header(Element):
 	headerType = 1 ## headerType == 1; h1 tag; till headerType == 6; h6 tag
 
 	def parse(self, indentLevel=0):
-		header = INDENT *indentLevel +"<h{} id=\"{}\" class=\"{}\">\n{}{}\n".format(self.headerType, self.id, self.c, INDENT *(indentLevel +1), self.content)
+		return INDENT *indentLevel +"<h{} id=\"{}\" class=\"{}\">\n{}{}\n{}</h{}>".format(self.headerType, self.id, self.c, INDENT *(indentLevel +1), self.content, INDENT *indentLevel, self.headerType)
 
-		children = self.parseChildren(indentLevel)
-		if len(children) == 0:
-			return header +(INDENT *indentLevel) +"</h{}>".format(self.headerType)
-		else:
-			return header +self.parseChildren(indentLevel) +"\n" +INDENT *indentLevel +"</h{}>".format(self.headerType)
+		# children = self.parseChildren(indentLevel)
+		# if len(children) == 0:
+		# 	return header +(INDENT *indentLevel) +"</h{}>".format(self.headerType)
+		# else:
+		# 	return header +self.parseChildren(indentLevel) +"\n" +INDENT *indentLevel +"</h{}>".format(self.headerType)
 
 class Image(Element):
 	type = 4
