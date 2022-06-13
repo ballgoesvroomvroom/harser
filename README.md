@@ -1,5 +1,8 @@
 # Harser
 
+###### You're viewing the Python version
+###### [Kotlin](https://github.com/ballgoesvroomvroom/harser-k) version
+
 My own custom text to HTML parser with a terrible name choice.<br>
 Used for my own [portfolio page](https://github.com/ballgoesvroomvroom/weter).<br>
 
